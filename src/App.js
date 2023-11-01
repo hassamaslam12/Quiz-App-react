@@ -1,32 +1,58 @@
 // import Button from './components/Button/Button'
 import { useState } from 'react';
 import './App.css'
+import Button from './components/Button/Button'
 
 function App() {
 
     const qusetionData = [
-      {question: `what is the full form of html?`,
-      options:[ `Hyper text makeup language`,`hyper text modern language`,`hyper text markup language`,`hyper text master language`],
-      answer:`hyper text markup language`,      
+    
+      {
+        question: "What is the Full Form Of HTML",
+        options: [
+          "HyperText Makeup Language",
+          "HyperText Markup Language",
+          "HyperText Markup Lame",
+          "HyperTate Markup Language",
+        ],
+        answer: "HyperText Markup Language",
       },
-      {question: `what is the full form of html?`,
-      options:[ `Hyper text makeup language`,`hyper text modern language`,`hyper text markup language`,`hyper text master language`],
-      answer:`hyper text markup language`,      
+      {
+        question: "What does CSS stands for?",
+        answer: "Cascading Style Sheet",
+        options: [
+          "Common Style Sheet",
+          "Colorful Style Sheet",
+          "Computer Style Sheet",
+          "Cascading Style Sheet",
+        ],
       },
-      {question: `what is the full form of html?`,
-      options:[ `Hyper text makeup language`,`hyper text modern language`,`hyper text markup language`,`hyper text master language`],
-      answer:`hyper text markup language`,      
+      {
+        question: "What does PHP stands for?",
+        answer: "Hypertext Preprocessor",
+        options: [
+          "Hypertext Preprocessor",
+          "Hypertext Programming",
+          "Hypertext Preprogramming",
+          "Hometext Preprocessor",
+        ],
       },
-      {question: `what is the full form of html?`,
-      options:[ `Hyper text makeup language`,`hyper text modern language`,`hyper text markup language`,`hyper text master language`],
-      answer:`hyper text markup language`,      
+      {
+        question: "What does SQL stands for?",
+        answer: "Structured Query Language",
+        options: [
+          "Stylish Question Language",
+          "Stylesheet Query Language",
+          "Statement Question Language",
+          "Structured Query Language",
+        ],
       },
-      {question: `what is the full form of html?`,
-      options:[ `Hyper text makeup language`,`hyper text modern language`,`hyper text markup language`,`hyper text master language`],
-      answer:`hyper text markup language`,      
+      {
+        question: "What year was JavaScript launched?",
+        answer: "1995",
+        options: ["1996", "1995", "1994", "None of the Above"],
       },
-     
-    ]
+    ];  
 
     const [count,setCount] = useState(0);
     const [score,setScore] = useState(0);
@@ -65,9 +91,9 @@ function App() {
                     
                   Question {count+1}/{qusetionData.length}
                   </p>
-                <h3>{qusetionData[0].question}</h3>
+                <h3>{qusetionData[count].question}</h3>
                  </div>
-              {qusetionData[0].options.map((e,i)=> <button key={i} onClick={nextQusetionHandler}>{e}</button>)}
+              {qusetionData[count].options.map((e,i)=> <button key={i} onClick={nextQusetionHandler}>{e}</button>)}
             <div>
             </div>
               </>
